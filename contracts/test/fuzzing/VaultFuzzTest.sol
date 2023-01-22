@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-import "../../Vault.sol";
+import "./Vault.sol";
 
 contract VaultFuzzTest is Vault {
     constructor() Vault("123asd123") {}

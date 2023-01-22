@@ -1,7 +1,7 @@
 {
   "name": "hardhat-security-fcc",
   "version": "1.0.0",
-  "description": "", 
+  "description": "",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
     "ethers": "^5.5.4",
@@ -22,8 +22,8 @@
     "solidity-coverage": "^0.7.20"
   },
   "scripts": {
-    "slither": "slither . --solc-remaps '@openzeppelin=node_modules/@openzeppelin @chainlink=node_modules/@chainlink' --exclude naming-convention,external-function,low-level-calls",
-    "toolbox": "docker run -it --rm -v $PWD:/src trailofbits/eth-security-toolbox",
+    "slither": "slither . --solc-remaps @openzeppelin=node_modules/@openzeppelin --solc-remaps @chainlink=node_modules/@chainlink --exclude naming-convention,external-function,low-level-calls",
+    "toolbox": "docker run -it --rm -v %CD%:/src trailofbits/eth-security-toolbox",
     "lint": "solhint 'contracts/*.sol'",
     "lint:fix": "solhint 'contracts/**/*.sol' --fix",
     "format": "prettier --write ."
